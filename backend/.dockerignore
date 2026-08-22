@@ -1,0 +1,11 @@
+target/
+*.iml
+.idea/
+.vscode/
+.mvn/
+.git/
+uploads/
+*.log
+.env
+.env.local
+test-uploads/

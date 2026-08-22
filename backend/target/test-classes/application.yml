@@ -1,0 +1,60 @@
+server:
+  port: 0
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:hms_test;MODE=MySQL;DB_CLOSE_DELAY=-1;NON_KEYWORDS=USER
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: ""
+
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
+    show-sql: false
+    open-in-view: false
+
+  flyway:
+    enabled: false
+
+  mail:
+    host: localhost
+    port: 3025
+    username: test@medicore.local
+    password: test
+
+app:
+  jwt:
+    secret: test-only-secret-key-not-for-production-use-minimum-256-bits-long
+    access-token-expiration-ms: 900000
+    refresh-token-expiration-ms: 604800000
+    issuer: hms-backend-test
+
+  cors:
+    allowed-origins: http://localhost:5173
+
+  frontend:
+    base-url: http://localhost:5173
+    reset-password-path: /reset-password
+    verify-email-path: /verify-email
+
+  file-storage:
+    root-dir: ./test-uploads
+
+  ai:
+    provider: gemini
+    gemini:
+      api-key: test-key
+      model: gemini-1.5-flash
+      base-url: https://generativelanguage.googleapis.com/v1beta
+    openai:
+      api-key: test-key
+      model: gpt-4o-mini
+      base-url: https://api.openai.com/v1
+
+logging:
+  level:
+    root: WARN

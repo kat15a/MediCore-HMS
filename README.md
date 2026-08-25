@@ -15,7 +15,7 @@ explanations, hospital FAQ chatbot).
 - [x] 3. Spring Boot Backend (entities, repositories, services, controllers)
 - [x] 4. JWT Authentication & Security
 - [x] 5. React Frontend (shell, theme, auth flow, routing)
-- [x] 6. CRUD Modules (Doctors, Patients, Appointments, Billing, etc.)
+- [x] 6. CRUD Modules (Doctors, Patients, Appointments, Billings, etc.)
 - [x] 7. AI Integration (Gemini/OpenAI)
 - [x] 8. Testing (JUnit/Mockito)
 - [x] 9. Docker
